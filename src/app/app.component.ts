@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {NgOptimizedImage} from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NgOptimizedImage],
+  imports: [RouterOutlet, NgOptimizedImage, DatePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -16,5 +17,15 @@ export class AppComponent {
   correo = 'elieljgarciavela@gmail.com'
   github = 'https://github.com/ElielJesusGarciaVela'
   idiomas = 'Español, English (C1)'
+  tecnologias = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'TypeScript',
+  'Angular',
+  'Java',
+  'Kotlin'
+];
+date = new Date();
 
 }

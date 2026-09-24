@@ -5,21 +5,18 @@
 <div class="main">
   <aside>
     <div class="profilepic">
-      <img ngSrc="images/pfp.jpg" width="100" height="100" alt="foto" />
+      <img ngSrc="images/pfp.jpg" width="250" height="250" alt="foto" />
     </div>
     <div class="selfdescription">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-        similique! Eos illum doloribus voluptatum omnis repellat deleniti in
-        ratione, ut laborum quasi ducimus inventore, ipsa harum explicabo iure
-        reiciendis dicta?
+        "Porque el pan sabe mejor que la llave.""
       </p>
     </div>
-    <div>
+    <div class="informacion">
       <p><b>Ciudad: </b>{{ ciudad }}</p>
       <p><b>Teléfono: </b>{{ telefono }}</p>
       <p>
-        <b>Gmail: </b> <a href="gmail.com" target="_blank">{{ correo }}</a>
+        <b>Gmail: </b> <a href="elieljgarciavela@gmail.com" target="_blank">{{ correo }}</a>
       </p>
       <p>
         <b>Github: </b> <a href="{{ github }}" target="_blank">{{ github }}</a>
@@ -31,44 +28,46 @@
     <div class="aboutme">
       <h1>Sobre mi</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quo modi
-        facilis pariatur soluta mollitia quas repellat ipsum quasi nesciunt
-        laudantium eum, maxime odit amet eos eius tempore. Itaque, impedit.
+        Me introduzco como una persona proactiva, educada, apasionada por lo que
+        hace, e innovativa, siempre en busca de mejoras. No me rindo ante lo
+        nuevo y siempre salgo adelante.
       </p>
     </div>
     <div class="experience">
       <h1>Experience</h1>
       <div class="erasmusexperience">
         <h4>Erasmus 2025</h4>
-        <p>Practicas en Republica Cecha, Praga, en 2025 con el programa Erasmus.</p>
+        <p>
+          Practicas en Republica Cecha, Praga, en 2025 con el programa Erasmus.
+        </p>
       </div>
       <div class="reweexperience">
         <h4>Practicas en REWE Digital 2026</h4>
-        <p>Practicas en REWE Digital como programador de ABAP y manejo de SAP</p>
+        <p>
+          Practicas en REWE Digital como programador de ABAP y manejo de SAP
+        </p>
       </div>
     </div>
     <div class="formation">
       <h1>Formación</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore numquam
-        debitis sit quam porro alias quod aperiam officiis, esse harum
-        molestias. Inventore explicabo eaque dolores. Quidem corrupti cupiditate
-        vero unde.
-      </p>
+      <h4>E.S.O</h4>
+      <h4>Ingeniero de Sistemas Microinformáticos y Redes</h4>
+      <h4>Ingeniero de Aplicaciones Multiplataformas</h4>
     </div>
     <div class="technologies">
       <h1>Technologías</h1>
       <ul>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>Kotlin</li>
-        <li>C#</li>
-        <li>Angular</li>
+        <li>{{ tecnologias[0] }}</li>
+        <li>{{ tecnologias[1] }}</li>
+        <li>{{ tecnologias[2] }}</li>
+        <li>{{ tecnologias[3] }}</li>
+        <li>{{ tecnologias[4] }}</li>
+        <li>{{ tecnologias[5] }}</li>
+        <li>{{ tecnologias[6] }}</li>
       </ul>
     </div>
   </main>
 </div>
 <footer>
-  <p>Curriculum desarrollado con Angular</p>
+  <p>Currículum desarrollado con Angular y cargado el {{ date }}</p>
 </footer>

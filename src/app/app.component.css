@@ -132,12 +132,14 @@ aside a:hover {
     padding-left: 2%;
 }
 
+
 footer {
     height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.9);
-    color: white;
+    color: #E1FF00;
     padding: 1% 0% 1% 0%;
 }
+

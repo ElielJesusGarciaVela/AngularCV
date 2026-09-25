@@ -8,15 +8,14 @@
       <img ngSrc="images/pfp.jpg" width="250" height="250" alt="foto" />
     </div>
     <div class="selfdescription">
-      <p>
-        "Porque el pan sabe mejor que la llave.""
-      </p>
+      <p>"Porque el pan sabe mejor que la llave."</p>
     </div>
     <div class="informacion">
       <p><b>Ciudad: </b>{{ ciudad }}</p>
       <p><b>Teléfono: </b>{{ telefono }}</p>
       <p>
-        <b>Gmail: </b> <a href="elieljgarciavela@gmail.com" target="_blank">{{ correo }}</a>
+        <b>Gmail: </b>
+        <a href="elieljgarciavela@gmail.com" target="_blank">{{ correo }}</a>
       </p>
       <p>
         <b>Github: </b> <a href="{{ github }}" target="_blank">{{ github }}</a>
@@ -57,13 +56,9 @@
     <div class="technologies">
       <h1>Technologías</h1>
       <ul>
-        <li>{{ tecnologias[0] }}</li>
-        <li>{{ tecnologias[1] }}</li>
-        <li>{{ tecnologias[2] }}</li>
-        <li>{{ tecnologias[3] }}</li>
-        <li>{{ tecnologias[4] }}</li>
-        <li>{{ tecnologias[5] }}</li>
-        <li>{{ tecnologias[6] }}</li>
+        @for (tecnologia of tecnologias; track tecnologia) {
+          <li>{{ tecnologia }}</li>
+        }
       </ul>
     </div>
   </main>

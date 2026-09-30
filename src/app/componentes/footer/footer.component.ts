@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-footer',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

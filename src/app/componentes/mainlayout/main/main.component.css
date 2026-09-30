@@ -1,0 +1,66 @@
+main {
+    flex: 1;
+    margin: 3%;
+}
+
+/*Clases de main*/
+
+/*Clase para apartado sobre mi*/
+.aboutme {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 1%;
+    margin-bottom: 1.5%;
+}
+
+/*Clase para apartado experiencia*/
+.experience {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 1%;
+    margin-bottom: 1.5%;
+}
+
+/*Clase para apartado formación*/
+.formation {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 1%;
+    margin-bottom: 1.5%;
+}
+
+.formation h4{
+    padding: 5px;
+}
+
+/*Subclases de FORMACION*/
+/*Erasmus experience*/
+.erasmusexperience {
+    padding-top: 1%;
+}
+.erasmusexperience p {
+    padding: 1%;
+}
+
+/*REWE experience*/
+.reweexperience {
+    padding-top: 1%;
+}
+.reweexperience p {
+    padding: 1%;
+}
+
+
+/*Clase para apartado tecnologías*/
+
+.technologies {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 1%;
+    margin-bottom: 1.5%;
+}
+
+.technologies ul, ol{
+    padding-top: 1%;
+    padding-left: 2%;
+}

@@ -1,0 +1,40 @@
+:host {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: max-content;
+    width: max-content;
+    min-width: 25%;
+}
+
+:host a {
+    color: #464646;
+    text-decoration: none;
+}
+
+:host a:hover {
+    cursor:pointer;
+}
+
+/*Clase para la foto de perfil*/
+.profilepic img {
+    display: flex;
+    margin: auto;
+    margin-top: 20%;
+    border-radius: 167px;
+}
+
+/*Clase de informacion sobre mi*/
+.informacion {
+    margin-left: 15%;
+}
+
+/*Clase para la descripcion propia*/
+.selfdescription {
+    margin: 10%;
+    font-size: 14px;
+}
+
+.selfdescription p{
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+}

@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {NgOptimizedImage} from '@angular/common';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterOutlet, NgOptimizedImage, DatePipe],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,21 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  title = 'cv';
   nombre = 'Eliel Jesús García Vela';
-  ciudad = 'Málaga, Campanillas'
-  telefono = '34+ 637247179'
-  correo = 'elieljgarciavela@gmail.com'
-  github = 'https://github.com/ElielJesusGarciaVela'
-  idiomas = 'Español, English (C1)'
-  tecnologias = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'Angular',
-  'Java',
-  'Kotlin'
-];
-date = new Date();
+  seccionActual = 'resumen';
+
+  seccionSeleccionada = output<string>();
+
+  seleccionar(seccion: string): void {
+    this.seccionActual = seccion;
+    this.seccionSeleccionada.emit(seccion);
+  }
 }

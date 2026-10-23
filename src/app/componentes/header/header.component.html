@@ -1,4 +1,23 @@
 <header>
-  <h1>{{ nombre }}</h1>
-  <h2>Desarrollador de Aplicaciones Multiplataformas</h2>
+  <div class="header-top">
+    <h1>{{ nombre }}</h1>
+    <h2>Desarrollador de Aplicaciones Multiplataformas</h2>
+  </div>
+  <nav class="header-nav">
+    <button
+      (click)="seleccionar('resumen')"
+      [class.activo]="seccionActual === 'resumen'">
+      Resumen
+    </button>
+    <button
+      (click)="seleccionar('experiencia')"
+      [class.activo]="seccionActual === 'experiencia'">
+      Experiencia
+    </button>
+    <button
+      (click)="seleccionar('formacion')"
+      [class.activo]="seccionActual === 'formacion'">
+      Formación
+    </button>
+  </nav>
 </header>

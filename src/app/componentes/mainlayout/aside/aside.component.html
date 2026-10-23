@@ -1,19 +1,26 @@
+<div class="profilepic">
+  <img ngSrc="images/pfp.jpg" width="250" height="250" [alt]="nombre" />
+</div>
+<div class="selfdescription">
+  <p>"Porque el pan sabe mejor que la llave."</p>
+</div>
 
-    <div class="profilepic">
-      <img ngSrc="images/pfp.jpg" width="250" height="250" alt="foto" />
-    </div>
-    <div class="selfdescription">
-      <p>"Porque el pan sabe mejor que la llave."</p>
-    </div>
-    <div class="informacion">
-      <p><b>Ciudad: </b>{{ ciudad }}</p>
-      <p><b>Teléfono: </b>{{ telefono }}</p>
-      <p>
-        <b>Gmail: </b>
-        <a href="elieljgarciavela@gmail.com" target="_blank">{{ correo }}</a>
-      </p>
-      <p>
-        <b>Github: </b> <a href="{{ github }}" target="_blank">{{ github }}</a>
-      </p>
-      <p><b>Idiomas: </b>{{ idiomas }}</p>
-    </div>
+<button class="toggle-contacto" (click)="toggleContacto()">
+  {{ mostrarContacto ? 'Ocultar' : 'Mostrar' }} datos de contacto
+</button>
+
+@if (mostrarContacto) {
+  <div class="informacion">
+    <p><b>Ciudad: </b>{{ ciudad }}</p>
+    <p><b>Teléfono: </b>{{ telefono }}</p>
+    <p>
+      <b>Gmail: </b>
+      <a [href]="'mailto:' + correo" target="_blank">{{ correo }}</a>
+    </p>
+    <p>
+      <b>Github: </b>
+      <a [href]="github" target="_blank">{{ github }}</a>
+    </p>
+    <p><b>Idiomas: </b>{{ idiomas }}</p>
+  </div>
+}

@@ -29,7 +29,7 @@ main {
     margin-bottom: 1.5%;
 }
 
-.formation h4{
+.formation h4 {
     padding: 5px;
 }
 
@@ -38,6 +38,7 @@ main {
 .erasmusexperience {
     padding-top: 1%;
 }
+
 .erasmusexperience p {
     padding: 1%;
 }
@@ -46,6 +47,7 @@ main {
 .reweexperience {
     padding-top: 1%;
 }
+
 .reweexperience p {
     padding: 1%;
 }
@@ -60,7 +62,56 @@ main {
     margin-bottom: 1.5%;
 }
 
-.technologies ul, ol{
+.technologies ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     padding-top: 1%;
-    padding-left: 2%;
+    padding-left: 0;
+    list-style: none;
+}
+
+.technologies li {
+    background: rgba(0, 0, 0, 0.08);
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 4px 14px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.technologies li:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.technologies li.seleccionada {
+    background: #E1FF00;
+    border-color: #b5cc00;
+    font-weight: bold;
+}
+
+.tech-seleccionada {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.empty-msg {
+    font-style: italic;
+    color: #666;
+    padding: 8px 0;
+}
+
+.exp-item {
+    border-left: 3px solid #b5cc00;
+    padding-left: 12px;
+    margin-bottom: 12px;
+}
+
+.exp-item h4 {
+    margin-bottom: 2px;
+}
+
+.exp-item em {
+    color: #555;
+    font-size: 13px;
 }

@@ -1,39 +1,63 @@
 <main>
-    <div class="aboutme">
-      <h1>Sobre mi</h1>
-      <p>
-        Me introduzco como una persona proactiva, educada, apasionada por lo que
-        hace, e innovativa, siempre en busca de mejoras. No me rindo ante lo
-        nuevo y siempre salgo adelante.
-      </p>
-    </div>
-    <div class="experience">
-      <h1>Experience</h1>
-      <div class="erasmusexperience">
-        <h4>Erasmus 2025</h4>
+  @switch (seccion()) {
+    @case ('resumen') {
+      <div class="aboutme">
+        <h1>Sobre Mí</h1>
         <p>
-          Practicas en Republica Cecha, Praga, en 2025 con el programa Erasmus.
+          Me introduzco como una persona proactiva, educada, apasionada por lo que
+          hace, e innovativa, siempre en busca de mejoras. No me rindo ante lo
+          nuevo y siempre salgo adelante.
         </p>
       </div>
-      <div class="reweexperience">
-        <h4>Practicas en REWE Digital 2026</h4>
-        <p>
-          Practicas en REWE Digital como programador de ABAP y manejo de SAP
-        </p>
-      </div>
-    </div>
-    <div class="formation">
-      <h1>Formación</h1>
-      <h4>E.S.O</h4>
-      <h4>Ingeniero de Sistemas Microinformáticos y Redes</h4>
-      <h4>Ingeniero de Aplicaciones Multiplataformas</h4>
-    </div>
-    <div class="technologies">
-      <h1>Technologías</h1>
-      <ul>
-        @for (tecnologia of tecnologias; track tecnologia) {
-          <li>{{ tecnologia }}</li>
+    }
+    @case ('experiencia') {
+      <div class="experience">
+        <h1>Experiencia Profesional</h1>
+        @for (exp of experiencias; track exp.id) {
+          <div class="exp-item">
+            <h4>{{ exp.empresa }} — {{ exp.puesto }}</h4>
+            <p><em>{{ exp.periodo }}</em></p>
+            <p>{{ exp.descripcion }}</p>
+          </div>
+        } @empty {
+          <p class="empty-msg">Todavía no se ha añadido experiencia profesional.</p>
         }
-      </ul>
-    </div>
-  </main>
+      </div>
+    }
+    @case ('formacion') {
+      <div class="formation">
+        <h1>Formación</h1>
+        <h4>E.S.O</h4>
+        <h4>Ingeniero de Sistemas Microinformáticos y Redes</h4>
+        <h4>Ingeniero de Aplicaciones Multiplataformas</h4>
+      </div>
+    }
+    @default {
+      <div class="aboutme">
+        <h1>Sobre Mí</h1>
+        <p>
+          Me introduzco como una persona proactiva, educada, apasionada por lo que
+          hace, e innovativa, siempre en busca de mejoras.
+        </p>
+      </div>
+    }
+  }
+
+  <div class="technologies">
+    <h1>Tecnologías</h1>
+    <ul>
+      @for (tecnologia of tecnologias; track tecnologia) {
+        <li
+          (click)="seleccionarTecnologia(tecnologia)"
+          [class.seleccionada]="tecnologiaSeleccionada === tecnologia">
+          {{ tecnologia }}
+        </li>
+      }
+    </ul>
+    @if (tecnologiaSeleccionada) {
+      <p class="tech-seleccionada">
+        Tecnología seleccionada: <strong>{{ tecnologiaSeleccionada }}</strong>
+      </p>
+    }
+  </div>
+</main>
